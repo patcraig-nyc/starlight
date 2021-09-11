@@ -1,21 +1,17 @@
-function Post({ date, image, title }) {
-  let { file, description } = image
-
+function Address(props) {
+  console.log('props.address: ',props.address)
   return (
     <div className="post">
-      <img alt={description} src={`https:${file.url}`} />
-      <div className="description">{description}</div>
-      <div className="text">
-        <h2>{title}</h2>
-        <h3>{date.substring(0, 10)}</h3>
-      </div>
+     <div>{props.address}</div>
+     <div>{props.geolocation}</div>
+      
 
-      <style jsx>{`
+       <style jsx>{`
         .post {
           position: relative;
           margin: 10px;
           width: 300px;
-          color: white;
+          color: black;
           cursor: pointer;
         }
         .description {
@@ -56,8 +52,8 @@ function Post({ date, image, title }) {
           max-width: 300px;
         }
       `}</style>
-    </div>
+    </div> 
   )
 }
 
-export default Post
+export default Address

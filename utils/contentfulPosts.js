@@ -10,7 +10,6 @@ const client = contentful.createClient({
 
 export async function fetchEntries() {
   const entries = await client.getEntries()
-  console.log('entries: ', entries)
   if (entries.items) return entries.items
   console.log(`Error getting Entries for ${contentType.name}.`)
 }
