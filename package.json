@@ -1,9 +1,9 @@
 {
-  "name": "next-contentful-starter",
+  "name": "starlight",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export"
@@ -13,5 +13,9 @@
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0"
   }
 }
